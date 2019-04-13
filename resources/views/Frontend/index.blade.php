@@ -101,7 +101,7 @@
 
           <!-- Last Item -->
           <div class="u-header-center-aligned-nav__col u-header-center-aligned-nav__col-last-item">
-            <a class="btn btn-sm btn-primary transition-3d-hover" href="#" target="_blank">
+            <a class="btn btn-sm btn-primary transition-3d-hover" href="{{ route('home') }}">
               <i class="fas fa-sign-in-alt"></i> Entrar
             </a>
           </div>

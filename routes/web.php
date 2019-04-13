@@ -14,3 +14,7 @@
 Route::get('/', function () {
     return view('Frontend.index');
 })->name('index');
+
+Auth::routes();
+
+Route::get('/panel', 'HomeController@index')->name('home');
