@@ -21,6 +21,7 @@ class CreateAddressesTable extends Migration
             $table->string('calle', 100);
             $table->integer('extNumber');
             $table->longText('reference')->nullable();
+            $table->integer('user_id')->unsigned();
             $table->timestamps();
          });
     }
