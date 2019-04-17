@@ -22,8 +22,8 @@ class CreateAddressesTable extends Migration
             $table->integer('extNumber');
             $table->longText('reference')->nullable();
             $table->timestamps();
+         });
     }
-}
 
     /**
      * Reverse the migrations.
