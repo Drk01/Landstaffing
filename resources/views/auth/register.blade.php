@@ -32,53 +32,73 @@
         <a class="hiddenanchor" id="signin"></a>
 
         <div class="login_wrapper">
+                @if ($errors->any())
+                <div class="alert alert-danger">
+                    <ul>
+                        @foreach ($errors->all() as $error)
+                            <li>{{ $error }}</li>
+                        @endforeach
+                    </ul>
+                </div>
+            @endif
             <div id="register" class="animate form login_form">
                 <section class="login_content">
-                    <form action="{{ route('register') }}">
+                    <form action="{{ route('register') }}" method="POST" autocomplete="off">
+                        @csrf
                         <h1>Crear cuenta</h1>
                         <div>
-                            <input class="form-control" type="text" name="name" id="name" placeholder="Nombre"
+                            <input required class="form-control" type="text" name="name" id="name" placeholder="Nombre"
                                 class="form-control">
                         </div>
                         <div>
-                            <input type="text" class="form-control" name="lastname" id="lastname"
+                            <input required type="text" class="form-control" name="lastname" id="lastname"
                                 placeholder="Apellido paterno">
                         </div>
                         <div>
-                            <input type="text" class="form-control" name="motherLastname" id="motherLastname"
+                            <input required type="text" class="form-control" name="motherLastname" id="motherLastname"
                                 placeholder="Apellido materno">
                         </div>
-                        <div class="form-group">
+                        <div style="margin: 0 0 1.3em 0">
                             <select class="form-control" name="country" id="country" placeholder="País">
                                 <option selected disabled hidden>Seleccione el país al que pertenece</option>
-                                @foreach ($countries as $country)
+                                @foreach ($countries->all() as $country)
                                     <option value="{{ $country->id }}">{{ $country->name }}</option>
                                 @endforeach
                             </select>
                         </div>
                         <div>
-                            <input type="text" name="state" id="state" class="form-control" placeholder="Estado">
+                            <input required type="text" name="state" id="state" class="form-control" placeholder="Estado">
                         </div>
                         <div>
-                            <input type="text" name="city" id="city" class="form-control" placeholder="Ciudad">
+                            <input required type="text" name="city" id="city" class="form-control" placeholder="Ciudad">
                         </div>
                         <div>
-                            <input class="form-control" type="text" name="street" id="street" placeholder="Calle">
+                            <input required class="form-control" type="text" name="street" id="street" placeholder="Calle">
                         </div>
                         <div>
-                            <input type="text" name="extN" id="extN" placeholder="Número exterior" class="form-control">
+                            <input required type="text" name="extN" id="extN" placeholder="Número exterior" class="form-control">
                         </div>
                         <div>
-                            <input type="text" class="form-control" placeholder="Usuario" required="" />
+                            <input required type="text" class="form-control" placeholder="Usuario" required="" />
                         </div>
                         <div>
-                            <input type="email" class="form-control" placeholder="Email" required="" />
+                            <input required name="email" type="email" class="form-control" placeholder="Email" required="" />
                         </div>
                         <div>
-                            <input type="password" class="form-control" placeholder="Password" required="" />
+                            <input required name="password" type="password" class="form-control" placeholder="Password" required="" />
                         </div>
                         <div>
-                            <button type="submit" class="btn btn-default submit">Crear cuenta</button>
+                            <textarea name="observations" id="observations" cols="30" rows="10" class="form-control" placeholder="Otros datos (Ej: Número interno en caso que viva en un complejo departamental)"></textarea>
+                        </div>
+                        <div style="margin-top: 1em">
+                            <select name="account" id="account" class="form-control">
+                                <option value="" disabled hidden selected>Seleccione el tipo de cuenta</option>
+                                <option value="2">Empleador</option>
+                                <option value="3">Empleado</option>
+                            </select>
+                        </div>
+                        <div>
+                            <button type="submit" style="margin-top: 1em" class="btn btn-default btn-block btn-lg submit">Crear cuenta</button>
                         </div>
 
                         <div class="clearfix"></div>
@@ -105,6 +125,7 @@
     <script>
     $(document).ready(function() {
         $('#country').select2();
+        $('#account').select2();
     });
     </script>
 
