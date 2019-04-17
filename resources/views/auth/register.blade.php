@@ -1,77 +1,112 @@
-@extends('layouts.app')
+<!DOCTYPE html>
+<html lang="es">
 
-@section('content')
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">{{ __('Register') }}</div>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!-- Meta, title, CSS, favicons, etc. -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-                <div class="card-body">
-                    <form method="POST" action="{{ route('register') }}">
-                        @csrf
+    <title>{{ config('app.name') }} | Iniciar sesión </title>
 
-                        <div class="form-group row">
-                            <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Name') }}</label>
+    <!-- Bootstrap -->
+    <link href="{{ asset('Panel/vendors/bootstrap/dist/css/bootstrap.min.css') }}" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link href="{{ asset('Panel/vendors/font-awesome/css/font-awesome.min.css') }}" rel="stylesheet">
+    <!-- NProgress -->
+    <link href="{{ asset('Panel/vendors/nprogress/nprogress.css') }}" rel="stylesheet">
+    <!-- Animate.css -->
+    <link href="{{ asset('Panel/vendors/animate.css/animate.min.css') }}" rel="stylesheet">
+    <!-- Select2 -->
+    <link rel="stylesheet" href="{{ asset('Panel/vendors/select2/dist/css/select2.min.css') }}">
 
-                            <div class="col-md-6">
-                                <input id="name" type="text" class="form-control{{ $errors->has('name') ? ' is-invalid' : '' }}" name="name" value="{{ old('name') }}" required autofocus>
 
-                                @if ($errors->has('name'))
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $errors->first('name') }}</strong>
-                                    </span>
-                                @endif
-                            </div>
+    <!-- Custom Theme Style -->
+    <link href="{{ asset('Panel/build/css/custom.min.css') }}" rel="stylesheet">
+</head>
+
+<body class="login">
+    <div>
+        <a class="hiddenanchor" id="signup"></a>
+        <a class="hiddenanchor" id="signin"></a>
+
+        <div class="login_wrapper">
+            <div id="register" class="animate form login_form">
+                <section class="login_content">
+                    <form action="{{ route('register') }}">
+                        <h1>Crear cuenta</h1>
+                        <div>
+                            <input class="form-control" type="text" name="name" id="name" placeholder="Nombre"
+                                class="form-control">
+                        </div>
+                        <div>
+                            <input type="text" class="form-control" name="lastname" id="lastname"
+                                placeholder="Apellido paterno">
+                        </div>
+                        <div>
+                            <input type="text" class="form-control" name="motherLastname" id="motherLastname"
+                                placeholder="Apellido materno">
+                        </div>
+                        <div class="form-group">
+                            <select class="form-control" name="country" id="country" placeholder="País">
+                                <option selected disabled hidden>Seleccione el país al que pertenece</option>
+                                @foreach ($countries as $country)
+                                    <option value="{{ $country->id }}">{{ $country->name }}</option>
+                                @endforeach
+                            </select>
+                        </div>
+                        <div>
+                            <input type="text" name="state" id="state" class="form-control" placeholder="Estado">
+                        </div>
+                        <div>
+                            <input type="text" name="city" id="city" class="form-control" placeholder="Ciudad">
+                        </div>
+                        <div>
+                            <input class="form-control" type="text" name="street" id="street" placeholder="Calle">
+                        </div>
+                        <div>
+                            <input type="text" name="extN" id="extN" placeholder="Número exterior" class="form-control">
+                        </div>
+                        <div>
+                            <input type="text" class="form-control" placeholder="Usuario" required="" />
+                        </div>
+                        <div>
+                            <input type="email" class="form-control" placeholder="Email" required="" />
+                        </div>
+                        <div>
+                            <input type="password" class="form-control" placeholder="Password" required="" />
+                        </div>
+                        <div>
+                            <button type="submit" class="btn btn-default submit">Crear cuenta</button>
                         </div>
 
-                        <div class="form-group row">
-                            <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('E-Mail Address') }}</label>
+                        <div class="clearfix"></div>
 
-                            <div class="col-md-6">
-                                <input id="email" type="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ old('email') }}" required>
+                        <div class="separator">
+                            <p class="change_link">¿Ya eres miembro?
+                                <a href="{{ route('login') }}" class="to_register"> Iniciar sesión </a>
+                            </p>
 
-                                @if ($errors->has('email'))
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $errors->first('email') }}</strong>
-                                    </span>
-                                @endif
-                            </div>
-                        </div>
+                            <div class="clearfix"></div>
+                            <br />
 
-                        <div class="form-group row">
-                            <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Password') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="password" type="password" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" name="password" required>
-
-                                @if ($errors->has('password'))
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $errors->first('password') }}</strong>
-                                    </span>
-                                @endif
-                            </div>
-                        </div>
-
-                        <div class="form-group row">
-                            <label for="password-confirm" class="col-md-4 col-form-label text-md-right">{{ __('Confirm Password') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required>
-                            </div>
-                        </div>
-
-                        <div class="form-group row mb-0">
-                            <div class="col-md-6 offset-md-4">
-                                <button type="submit" class="btn btn-primary">
-                                    {{ __('Register') }}
-                                </button>
+                            <div>
+                                <h1> {{ config('app.name') }}!</h1>
+                                <p>&copy; All Rights Reserved. {{ config('app.name') }}. Privacy and Terms</p>
                             </div>
                         </div>
                     </form>
-                </div>
-            </div>
-        </div>
+                </section>
     </div>
-</div>
-@endsection
+
+    <script src="{{ asset('Panel/vendors/select2/dist/js/select2.full.min.js') }}"></script>
+
+    <script>
+    $(document).ready(function() {
+        $('#country').select2();
+    });
+    </script>
+
+</body>
+</html>
