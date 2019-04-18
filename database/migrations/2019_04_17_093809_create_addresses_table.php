@@ -17,7 +17,6 @@ class CreateAddressesTable extends Migration
             $table->bigIncrements('id');
             $table->string('estado', 100);
             $table->string('ciudad', 100);
-            $table->string('colonia', 100);
             $table->string('calle', 100);
             $table->integer('extNumber');
             $table->longText('reference')->nullable();
