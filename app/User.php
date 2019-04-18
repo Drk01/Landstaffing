@@ -73,8 +73,12 @@ class User extends Authenticatable
         }
         return false;
     }
-    
+
     public function phone(){
-        $this->hasOne('App\Phone');
+        return $this->hasOne('App\Phone')->withTimestamps();
+    }
+
+    public function address(){
+        return $this->hasOne('App\Address');
     }
 }
