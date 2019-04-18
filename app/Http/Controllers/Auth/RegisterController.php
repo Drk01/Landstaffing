@@ -2,6 +2,10 @@
 
 namespace App\Http\Controllers\Auth;
 
+use App\Role;
+use App\Address;
+use App\Country;
+use App\Phone;
 use App\User;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Hash;
@@ -71,18 +75,23 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
-/*         echo 'Validación pasada';
-        dd($data);
-        $User = User::create([
-            'name' => $data['name'],
-            'email' => $data['email'],
-            'password' => Hash::make($data['password']),
+        $user = new User;
+        $user->name = $data['name'];
+        $user->lastname = $data['lastname'];
+        $user->motherLastname = $data['motherLastname'];
+        $user->email = $data['email'];
+        $user->password = bcrypt($data['password']);
+        $user->save();
+        $user->address()->create([
+            'calle' => $data['street'],
+            'estado' => $data['state'],
+            'ciudad' => $data['city'],
+            'extNumber' => $data['extN'],
+            'reference' => $data['observations']
         ]);
-
-        $role = Role::where('name',$data['role'])->name;
-
-        $User->roles()->attach(Role::where('name',$role)->first());
-
-        return $User; */
+        $user->roles()->attach($data['account']);
+        $address = Address::where('user_id',$user->id)->first();
+        $address->country()->attach($data['country']);
+        return $user;
     }
 }
