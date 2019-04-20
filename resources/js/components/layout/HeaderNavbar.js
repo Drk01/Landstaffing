@@ -42,8 +42,9 @@ export default class HeaderNavbar extends Component {
                                     </li>
                                     <form
                                         method="POST"
-                                        action="{{ route('logout') }}"
+                                        action="/logout"
                                     >
+                                    <input type="hidden" name="_token" value={csrf_token} />
                                         <li>
                                             <button
                                                 className="btn btn-default btn-block"

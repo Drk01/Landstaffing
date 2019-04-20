@@ -25074,8 +25074,12 @@ function (_Component) {
         href: "javascript:;"
       }, "Ayuda")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
         method: "POST",
-        action: "{{ route('logout') }}"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+        action: "/logout"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+        type: "hidden",
+        name: "_token",
+        value: csrf_token
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
         className: "btn btn-default btn-block",
         type: "submit"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
