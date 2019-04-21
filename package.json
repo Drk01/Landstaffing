@@ -27,6 +27,7 @@
         "sass-loader": "^7.1.0"
     },
     "dependencies": {
-        "babel-preset-react": "^6.24.1"
+        "babel-preset-react": "^6.24.1",
+        "gentelella": "^1.4.0"
     }
 }
