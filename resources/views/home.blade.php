@@ -1,23 +1,37 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">Dashboard</div>
+<div class="right_col" role="main">
+  <div class="">
+    <div class="page-title">
+      <div class="title_left">
+        <h3>Plain Page</h3>
+      </div>
 
-                <div class="card-body">
-                    @if (session('status'))
-                        <div class="alert alert-success" role="alert">
-                            {{ session('status') }}
-                        </div>
-                    @endif
+      <div class="title_right">
+        <div class="col-md-5 col-sm-5 col-xs-12 form-group pull-right top_search">
+          <div class="input-group">
 
-                    You are logged in!
-                </div>
-            </div>
+          </div>
         </div>
+      </div>
     </div>
+
+    <div class="clearfix"></div>
+
+    <div class="row"> 
+      <div class="col-md-12 col-sm-12 col-xs-12">
+        <div class="x_panel">
+          <div class="x_title">
+            <h2>Plain Page</h2>
+            <div class="clearfix"></div>
+          </div>
+          <div class="x_content">
+              Add content to the page ...
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
 @endsection
