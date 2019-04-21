@@ -24841,9 +24841,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js");
 /* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_dom__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _layout_HeaderNavbar__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./layout/HeaderNavbar */ "./resources/js/components/layout/HeaderNavbar.js");
-/* harmony import */ var _layout_NavBar__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./layout/NavBar */ "./resources/js/components/layout/NavBar.js");
-/* harmony import */ var _layout_Body__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./layout/Body */ "./resources/js/components/layout/Body.js");
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -24861,9 +24858,6 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
-
-
-
 
 
 
@@ -24883,59 +24877,385 @@ function (_Component) {
     key: "render",
     value: function render() {
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "container body"
+        classname: "container body"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "main_container"
+        classname: "main_container"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "col-md-3 left_col"
+        classname: "col-md-3 left_col"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "left_col scroll-view"
+        classname: "left_col scroll-view"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "navbar nav_title",
-        style: {}
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("center", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-        href: "/",
-        className: "site_title"
-      }, " ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, appName)))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "clearfix"
+        classname: "navbar nav_title",
+        style: {
+          border: "0"
+        }
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+        href: "index.html",
+        classname: "site_title"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+        classname: "fa fa-paw"
+      }), " ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "Gentelella Alela!"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        classname: "clearfix"
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "profile clearfix"
+        classname: "profile clearfix"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "profile_pic"
+        classname: "profile_pic"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-        src: "Panel/images/img.jpg",
+        src: "images/img.jpg",
         alt: "...",
-        className: "img-circle profile_img"
+        classname: "img-circle profile_img"
       })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "profile_info"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "Bienvenido,"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, username)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "clearfix"
+        classname: "profile_info"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "Welcome,"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "John Doe")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        classname: "clearfix"
       })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         id: "sidebar-menu",
-        className: "main_menu_side hidden-print main_menu"
+        classname: "main_menu_side hidden-print main_menu"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "menu_section"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", null, "Men\xFA"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
-        className: "nav side-menu"
+        classname: "menu_section"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", null, "General"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
+        classname: "nav side-menu"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-        href: "/"
+        href: "/panel"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
-        className: "fa fa-home"
+        classname: "fa fa-home"
       }), " Home ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
-        className: "fa fa-chevron"
-      })))))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
-        id: "Mostrar_Barra_Lateral"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_layout_NavBar__WEBPACK_IMPORTED_MODULE_3__["default"], null)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
-        id: "Mostrar_Contenido",
-        className: "right_col",
-        role: "main"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_layout_Body__WEBPACK_IMPORTED_MODULE_4__["default"], null)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("footer", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "pull-right"
+        classname: "fa fa-chevron-down"
+      }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+        classname: "fa fa-edit"
+      }), " Forms ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+        classname: "fa fa-chevron-down"
+      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
+        classname: "nav child_menu"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+        href: "form.html"
+      }, "General Form")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+        href: "form_advanced.html"
+      }, "Advanced Components")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+        href: "form_validation.html"
+      }, "Form Validation")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+        href: "form_wizards.html"
+      }, "Form Wizard")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+        href: "form_upload.html"
+      }, "Form Upload")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+        href: "form_buttons.html"
+      }, "Form Buttons")))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+        classname: "fa fa-desktop"
+      }), " UI Elements ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+        classname: "fa fa-chevron-down"
+      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
+        classname: "nav child_menu"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+        href: "general_elements.html"
+      }, "General Elements")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+        href: "media_gallery.html"
+      }, "Media Gallery")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+        href: "typography.html"
+      }, "Typography")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+        href: "icons.html"
+      }, "Icons")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+        href: "glyphicons.html"
+      }, "Glyphicons")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+        href: "widgets.html"
+      }, "Widgets")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+        href: "invoice.html"
+      }, "Invoice")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+        href: "inbox.html"
+      }, "Inbox")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+        href: "calendar.html"
+      }, "Calendar")))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+        classname: "fa fa-table"
+      }), " Tables ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+        classname: "fa fa-chevron-down"
+      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
+        classname: "nav child_menu"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+        href: "tables.html"
+      }, "Tables")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+        href: "tables_dynamic.html"
+      }, "Table Dynamic")))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+        classname: "fa fa-bar-chart-o"
+      }), " Data Presentation ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+        classname: "fa fa-chevron-down"
+      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
+        classname: "nav child_menu"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+        href: "chartjs.html"
+      }, "Chart JS")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+        href: "chartjs2.html"
+      }, "Chart JS2")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+        href: "morisjs.html"
+      }, "Moris JS")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+        href: "echarts.html"
+      }, "ECharts")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+        href: "other_charts.html"
+      }, "Other Charts")))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+        classname: "fa fa-clone"
+      }), "Layouts ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+        classname: "fa fa-chevron-down"
+      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
+        classname: "nav child_menu"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+        href: "fixed_sidebar.html"
+      }, "Fixed Sidebar")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+        href: "fixed_footer.html"
+      }, "Fixed Footer")))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        classname: "menu_section"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", null, "Live On"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
+        classname: "nav side-menu"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+        classname: "fa fa-bug"
+      }), " Additional Pages ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+        classname: "fa fa-chevron-down"
+      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
+        classname: "nav child_menu"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+        href: "e_commerce.html"
+      }, "E-commerce")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+        href: "projects.html"
+      }, "Projects")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+        href: "project_detail.html"
+      }, "Project Detail")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+        href: "contacts.html"
+      }, "Contacts")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+        href: "profile.html"
+      }, "Profile")))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+        classname: "fa fa-windows"
+      }), " Extras ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+        classname: "fa fa-chevron-down"
+      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
+        classname: "nav child_menu"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+        href: "page_403.html"
+      }, "403 Error")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+        href: "page_404.html"
+      }, "404 Error")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+        href: "page_500.html"
+      }, "500 Error")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+        href: "plain_page.html"
+      }, "Plain Page")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+        href: "login.html"
+      }, "Login Page")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+        href: "pricing_tables.html"
+      }, "Pricing Tables")))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+        classname: "fa fa-sitemap"
+      }), " Multilevel Menu ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+        classname: "fa fa-chevron-down"
+      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
+        classname: "nav child_menu"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+        href: "#level1_1"
+      }, "Level One")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", null, "Level One", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+        classname: "fa fa-chevron-down"
+      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
+        classname: "nav child_menu"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+        classname: "sub_menu"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-        href: "/"
-      }, "Land Staffing Solutions")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "clearfix"
-      }))));
+        href: "level2.html"
+      }, "Level Two")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+        href: "#level2_1"
+      }, "Level Two")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+        href: "#level2_2"
+      }, "Level Two")))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+        href: "#level1_2"
+      }, "Level One")))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+        href: "javascript:void(0)"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+        classname: "fa fa-laptop"
+      }), " Landing Page ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+        classname: "label label-success pull-right"
+      }, "Coming Soon")))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        classname: "sidebar-footer hidden-small"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+        "data-toggle": "tooltip",
+        "data-placement": "top",
+        title: "Settings"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+        classname: "glyphicon glyphicon-cog",
+        "aria-hidden": "true"
+      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+        "data-toggle": "tooltip",
+        "data-placement": "top",
+        title: "FullScreen"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+        classname: "glyphicon glyphicon-fullscreen",
+        "aria-hidden": "true"
+      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+        "data-toggle": "tooltip",
+        "data-placement": "top",
+        title: "Lock"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+        classname: "glyphicon glyphicon-eye-close",
+        "aria-hidden": "true"
+      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+        "data-toggle": "tooltip",
+        "data-placement": "top",
+        title: "Logout",
+        href: "login.html"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+        classname: "glyphicon glyphicon-off",
+        "aria-hidden": "true"
+      }))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        classname: "top_nav"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        classname: "nav_menu"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("nav", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        classname: "nav toggle"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+        id: "menu_toggle"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+        classname: "fa fa-bars"
+      }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
+        classname: "nav navbar-nav navbar-right"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+        classname: true
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+        href: "javascript:;",
+        classname: "user-profile dropdown-toggle",
+        "data-toggle": "dropdown",
+        "aria-expanded": "false"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+        src: "images/img.jpg",
+        alt: true
+      }), "John Doe", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+        classname: " fa fa-angle-down"
+      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
+        classname: "dropdown-menu dropdown-usermenu pull-right"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+        href: "javascript:;"
+      }, " Profile")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+        href: "javascript:;"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+        classname: "badge bg-red pull-right"
+      }, "50%"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "Settings"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+        href: "javascript:;"
+      }, "Help")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+        href: "login.html"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+        classname: "fa fa-sign-out pull-right"
+      }), " Log Out")))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+        role: "presentation",
+        classname: "dropdown"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+        href: "javascript:;",
+        classname: "dropdown-toggle info-number",
+        "data-toggle": "dropdown",
+        "aria-expanded": "false"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+        classname: "fa fa-envelope-o"
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+        classname: "badge bg-green"
+      }, "6")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
+        id: "menu1",
+        classname: "dropdown-menu list-unstyled msg_list",
+        role: "menu"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+        classname: "image"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+        src: "images/img.jpg",
+        alt: "Profile Image"
+      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "John Smith"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+        classname: "time"
+      }, "3 mins ago")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+        classname: "message"
+      }, "Film festivals used to be do-or-die moments for movie makers. They were where..."))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+        classname: "image"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+        src: "images/img.jpg",
+        alt: "Profile Image"
+      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "John Smith"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+        classname: "time"
+      }, "3 mins ago")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+        classname: "message"
+      }, "Film festivals used to be do-or-die moments for movie makers. They were where..."))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+        classname: "image"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+        src: "images/img.jpg",
+        alt: "Profile Image"
+      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "John Smith"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+        classname: "time"
+      }, "3 mins ago")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+        classname: "message"
+      }, "Film festivals used to be do-or-die moments for movie makers. They were where..."))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+        classname: "image"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+        src: "images/img.jpg",
+        alt: "Profile Image"
+      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "John Smith"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+        classname: "time"
+      }, "3 mins ago")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+        classname: "message"
+      }, "Film festivals used to be do-or-die moments for movie makers. They were where..."))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        classname: "text-center"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("strong", null, "See All Alerts"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+        classname: "fa fa-angle-right"
+      })))))))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        classname: "right_col",
+        role: "main"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        classname: true
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        classname: "page-title"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        classname: "title_left"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", null, "Plain Page")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        classname: "title_right"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        classname: "col-md-5 col-sm-5 col-xs-12 form-group pull-right top_search"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        classname: "input-group"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+        type: "text",
+        classname: "form-control",
+        placeholder: "Search for..."
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+        classname: "input-group-btn"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+        classname: "btn btn-default",
+        type: "button"
+      }, "Go!")))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        classname: "clearfix"
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        classname: "row"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        classname: "col-md-12 col-sm-12 col-xs-12"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        classname: "x_panel"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        classname: "x_title"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "Plain Page"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
+        classname: "nav navbar-right panel_toolbox"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+        classname: "collapse-link"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+        classname: "fa fa-chevron-up"
+      }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+        classname: "dropdown"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+        href: "#",
+        classname: "dropdown-toggle",
+        "data-toggle": "dropdown",
+        role: "button",
+        "aria-expanded": "false"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+        classname: "fa fa-wrench"
+      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
+        classname: "dropdown-menu",
+        role: "menu"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+        href: "#"
+      }, "Settings 1")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+        href: "#"
+      }, "Settings 2")))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+        classname: "close-link"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+        classname: "fa fa-close"
+      })))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        classname: "clearfix"
+      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        classname: "x_content"
+      }, "Add content to the page ..."))))))));
     }
   }]);
 
@@ -24946,300 +25266,6 @@ function (_Component) {
 
 if (document.getElementById('SinglePage')) {
   react_dom__WEBPACK_IMPORTED_MODULE_1___default.a.render(react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Index, null), document.getElementById('SinglePage'));
-}
-
-/***/ }),
-
-/***/ "./resources/js/components/layout/Body.js":
-/*!************************************************!*\
-  !*** ./resources/js/components/layout/Body.js ***!
-  \************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return Body; });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js");
-/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_dom__WEBPACK_IMPORTED_MODULE_1__);
-function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
-
-function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
-
-function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
-
-function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
-
-function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
-
-function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
-
-
-
-
-var Body =
-/*#__PURE__*/
-function (_Component) {
-  _inherits(Body, _Component);
-
-  function Body() {
-    _classCallCheck(this, Body);
-
-    return _possibleConstructorReturn(this, _getPrototypeOf(Body).apply(this, arguments));
-  }
-
-  _createClass(Body, [{
-    key: "render",
-    value: function render() {
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: ""
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "page-title"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "title_left"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", null, "Plain Page"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "clearfix"
-      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "row"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "col-md-12 col-sm-12 col-xs-12"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "x_panel"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "x_title"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "Plain Page"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "clearfix"
-      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "x_content"
-      }, "Add content to the page ...")))));
-    }
-  }]);
-
-  return Body;
-}(react__WEBPACK_IMPORTED_MODULE_0__["Component"]);
-
-
-
-if (document.getElementById('Mostrar_Contenido')) {
-  react_dom__WEBPACK_IMPORTED_MODULE_1___default.a.render(react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Body, null), document.getElementById('Mostrar_Contenido'));
-}
-
-/***/ }),
-
-/***/ "./resources/js/components/layout/HeaderNavbar.js":
-/*!********************************************************!*\
-  !*** ./resources/js/components/layout/HeaderNavbar.js ***!
-  \********************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return HeaderNavbar; });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js");
-/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_dom__WEBPACK_IMPORTED_MODULE_1__);
-function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
-
-function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
-
-function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
-
-function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
-
-function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
-
-function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
-
-
-
-
-var HeaderNavbar =
-/*#__PURE__*/
-function (_Component) {
-  _inherits(HeaderNavbar, _Component);
-
-  function HeaderNavbar() {
-    _classCallCheck(this, HeaderNavbar);
-
-    return _possibleConstructorReturn(this, _getPrototypeOf(HeaderNavbar).apply(this, arguments));
-  }
-
-  _createClass(HeaderNavbar, [{
-    key: "render",
-    value: function render() {
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "top_nav"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "nav_menu"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("nav", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "nav toggle"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-        id: "menu_toggle"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
-        className: "fa fa-bars"
-      }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
-        className: "nav navbar-nav navbar-right"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
-        className: ""
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-        href: "javascript:;",
-        className: "user-profile dropdown-toggle",
-        "data-toggle": "dropdown",
-        "aria-expanded": "false"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-        src: "Panel/images/img.jpg",
-        alt: ""
-      }), username, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
-        className: " fa fa-angle-down"
-      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
-        className: "dropdown-menu dropdown-usermenu pull-right"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-        href: "javascript:;"
-      }, " Perf\xEDl")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-        href: "javascript:;"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
-        className: "badge bg-red pull-right"
-      }, "Incompleto"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "Configuraci\xF3n"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-        href: "javascript:;"
-      }, "Ayuda")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
-        method: "POST",
-        action: "/logout"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
-        type: "hidden",
-        name: "_token",
-        value: csrf_token
-      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-        className: "btn btn-default btn-block",
-        type: "submit"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
-        className: "fa fa-sign-out"
-      }), "Cerrar Ses\xEDon")))))))));
-    }
-  }]);
-
-  return HeaderNavbar;
-}(react__WEBPACK_IMPORTED_MODULE_0__["Component"]);
-
-
-
-if (document.getElementById("Mostrar_Navbar_Header")) {
-  react_dom__WEBPACK_IMPORTED_MODULE_1___default.a.render(react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(HeaderNavbar, null), document.getElementById("Mostrar_Navbar_Header"));
-}
-
-/***/ }),
-
-/***/ "./resources/js/components/layout/NavBar.js":
-/*!**************************************************!*\
-  !*** ./resources/js/components/layout/NavBar.js ***!
-  \**************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return NavBar; });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js");
-/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_dom__WEBPACK_IMPORTED_MODULE_1__);
-function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
-
-function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
-
-function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
-
-function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
-
-function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
-
-function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
-
-
-
-
-var NavBar =
-/*#__PURE__*/
-function (_Component) {
-  _inherits(NavBar, _Component);
-
-  function NavBar() {
-    _classCallCheck(this, NavBar);
-
-    return _possibleConstructorReturn(this, _getPrototypeOf(NavBar).apply(this, arguments));
-  }
-
-  _createClass(NavBar, [{
-    key: "render",
-    value: function render() {
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "col-md-3 left_col"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "left_col scroll-view"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "navbar nav_title"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("center", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-        href: "/",
-        className: "site_title"
-      }, " ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, appName)))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "clearfix"
-      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "profile clearfix"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "profile_pic"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-        src: "Panel/images/img.jpg",
-        alt: "...",
-        className: "img-circle profile_img"
-      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "profile_info"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "Bienvenido,"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, username)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "clearfix"
-      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        id: "sidebar-menu",
-        className: "main_menu_side hidden-print main_menu"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "menu_section"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", null, "Men\xFA"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
-        className: "nav side-menu"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-        href: "{{ route('home') }}"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
-        className: "fa fa-home"
-      }), " Home ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
-        className: "fa fa-chevron"
-      }))))))));
-    }
-  }]);
-
-  return NavBar;
-}(react__WEBPACK_IMPORTED_MODULE_0__["Component"]);
-
-
-
-if (document.getElementById('Mostrar_Barra_Lateral')) {
-  react_dom__WEBPACK_IMPORTED_MODULE_1___default.a.render(react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(NavBar, null), document.getElementById('Mostrar_Barra_Lateral'));
 }
 
 /***/ }),
