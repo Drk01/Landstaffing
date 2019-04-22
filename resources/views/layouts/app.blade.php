@@ -1,80 +1,133 @@
 <!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+<html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <!-- Meta, title, CSS, favicons, etc. -->
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- CSRF Token -->
-    <meta name="csrf-token" content="{{ csrf_token() }}">
+  <title>{{ config('app.name') }} </title>
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+  <!-- Bootstrap -->
+  <link href="{{ asset('Panel/vendors/bootstrap/dist/css/bootstrap.min.css') }}" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link href="{{ asset('Panel/vendors/font-awesome/css/font-awesome.min.css') }}" rel="stylesheet">
+  <!-- NProgress -->
+  <link href="{{ asset('Panel/vendors/nprogress/nprogress.css') }}" rel="stylesheet">
 
-    <!-- Scripts -->
-    <script src="{{ asset('js/app.js') }}" defer></script>
-
-    <!-- Fonts -->
-    <link rel="dns-prefetch" href="//fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet" type="text/css">
-
-    <!-- Styles -->
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+  <!-- Custom Theme Style -->
+  <link href="{{ asset('Panel/build/css/custom.min.css') }}" rel="stylesheet">
 </head>
-<body>
-    <div id="app">
-        <nav class="navbar navbar-expand-md navbar-light navbar-laravel">
-            <div class="container">
-                <a class="navbar-brand" href="{{ url('/') }}">
-                    {{ config('app.name', 'Laravel') }}
-                </a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
 
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <!-- Left Side Of Navbar -->
-                    <ul class="navbar-nav mr-auto">
+<body class="nav-md">
+  <div class="container body">
+    <div class="main_container">
+      <div class="col-md-3 left_col">
+        <div class="left_col scroll-view">
+          <div class="navbar nav_title" style="border: 0;">
+            <a href="{{ route('index') }}" class="site_title"><img width="50px" src="{{ asset('img/icon.png') }}" alt="LS"> <span>{{ config('app.name') }}</span></a>
+          </div>
 
-                    </ul>
+          <div class="clearfix"></div>
 
-                    <!-- Right Side Of Navbar -->
-                    <ul class="navbar-nav ml-auto">
-                        <!-- Authentication Links -->
-                        @guest
-                            <li class="nav-item">
-                                <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
-                            </li>
-                            @if (Route::has('register'))
-                                <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
-                                </li>
-                            @endif
-                        @else
-                            <li class="nav-item dropdown">
-                                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                    {{ Auth::user()->name }} <span class="caret"></span>
-                                </a>
-
-                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="{{ route('logout') }}"
-                                       onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
-                                        {{ __('Logout') }}
-                                    </a>
-
-                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                                        @csrf
-                                    </form>
-                                </div>
-                            </li>
-                        @endguest
-                    </ul>
-                </div>
+          <!-- menu profile quick info -->
+          <div class="profile clearfix">
+            <div class="profile_pic">
+              <img src="{{ asset('Panel/images/img.jpg') }}" alt="..." class="img-circle profile_img">
             </div>
-        </nav>
+            <div class="profile_info">
+              <span>Bienvenido,</span>
+              <h2>{{ auth()->user()->name }}</h2>
+            </div>
+            <div class="clearfix"></div>
+          </div>
+          <!-- /menu profile quick info -->
 
-        <main class="py-4">
-            @yield('content')
-        </main>
+          <br />
+
+          <!-- sidebar menu -->
+          <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
+            <div class="menu_section">
+              <h3>General</h3>
+              <ul class="nav side-menu">
+                <li><a href="{{ route('home') }}"><i class="fa fa-home"></i> Inicio </a></li>
+                {{-- <li><a><i class="fa fa-edit"></i> Forms <span class="fa fa-chevron-down"></span></a>
+                <ul class="nav child_menu">
+                <li><a href="form.html">General Form</a></li>
+                <li><a href="form_advanced.html">Advanced Components</a></li>
+                <li><a href="form_validation.html">Form Validation</a></li>
+                <li><a href="form_wizards.html">Form Wizard</a></li>
+                <li><a href="form_upload.html">Form Upload</a></li>
+                <li><a href="form_buttons.html">Form Buttons</a></li>
+              </ul>
+            </li> --}}
+          </ul>
+        </div>
+      </div>
+      <!-- /sidebar menu -->
     </div>
+  </div>
+
+  <!-- top navigation -->
+  <div class="top_nav">
+    <div class="nav_menu">
+      <nav>
+        <div class="nav toggle">
+          <a id="menu_toggle"><i class="fa fa-bars"></i></a>
+        </div>
+
+        <ul class="nav navbar-nav navbar-right">
+          <li class="">
+            <a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+              <img src="{{ asset('Panel/images/img.jpg') }}" alt="">{{ auth()->user()->name }}
+              <span class=" fa fa-angle-down"></span>
+            </a>
+            <ul class="dropdown-menu dropdown-usermenu pull-right">
+              <li>
+                <a href="javascript:;">
+                  <span class="badge bg-red pull-right">50%</span>
+                  <span>Perfíl</span>
+                </a>
+              </li>
+              <li><a href="javascript:;"> Configuración</a></li>
+              <li><a href="javascript:;">Ayuda</a></li>
+              <li>
+                <a onclick="document.getElementById('close_session').submit();" > <i class="fa fa-sign-out pull-right"></i> Cerrar Sesión </a>
+              </li>
+<form id="close_session" action="{{ route('logout') }}" method="post">
+                {{ csrf_field() }}
+              </form>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</div>
+<!-- /top navigation -->
+<!-- page content -->
+@yield('content')
+<!-- footer content -->
+<footer>
+  <div class="pull-right">
+    {{ config('app.name') }} - <a href="{{ route('index') }}">{{ config('app.name') }}</a>
+  </div>
+  <div class="clearfix"></div>
+</footer>
+<!-- /footer content -->
+</div>
+</div>
+
+<!-- jQuery -->
+<script src="{{ asset('Panel/vendors/jquery/dist/jquery.min.js') }}"></script>
+<!-- Bootstrap -->
+<script src="{{ asset('Panel/vendors/bootstrap/dist/js/bootstrap.min.js') }}"></script>
+<!-- FastClick -->
+<script src="{{ asset('Panel/vendors/fastclick/lib/fastclick.js') }}"></script>
+<!-- NProgress -->
+<script src="{{ asset('Panel/vendors/nprogress/nprogress.js') }}"></script>
+
+<!-- Custom Theme Scripts -->
+<script src="{{ asset('Panel/build/js/custom.min.js') }}"></script>
 </body>
 </html>
