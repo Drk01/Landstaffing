@@ -84,37 +84,44 @@
               <span class=" fa fa-angle-down"></span>
             </a>
             <ul class="dropdown-menu dropdown-usermenu pull-right">
+              <li><a href="javascript:;">Perfíl</a></li>
               <li>
-                <a href="javascript:;">
-                  <span class="badge bg-red pull-right">50%</span>
-                  <span>Perfíl</span>
-                </a>
+                <a href="{{ route('account') }}"> Mis datos</a>
               </li>
-              <li><a href="javascript:;"> Configuración</a></li>
+              </li>
+              <li><a href="javascript:;"> Configuración </a></li>
               <li><a href="javascript:;">Ayuda</a></li>
               <li>
                 <a onclick="document.getElementById('close_session').submit();" > <i class="fa fa-sign-out pull-right"></i> Cerrar Sesión </a>
               </li>
-<form id="close_session" action="{{ route('logout') }}" method="post">
+              <form id="close_session" action="{{ route('logout') }}" method="post">
                 {{ csrf_field() }}
               </form>
-          </ul>
-        </li>
-      </ul>
-    </nav>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </div>
   </div>
-</div>
-<!-- /top navigation -->
-<!-- page content -->
-@yield('content')
-<!-- footer content -->
-<footer>
-  <div class="pull-right">
-    {{ config('app.name') }} - <a href="{{ route('index') }}">{{ config('app.name') }}</a>
+  <!-- /top navigation -->
+  <!-- page content -->
+  <div class="right_col" role="main">
+        <div class="alert alert-info alert-dismissible fade in" role="alert">
+          <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <strong>Parece que tu cueenta está incompleta, te invitamos a <a style="color: orange" href="{{ route('account') }}" class="alert-link">rellenar los datos que faltan en tu cuenta</a> para que puedas accesar a todos los beneficios de la plataforma  </strong>
+        </div>
+            <div class="">
+      @yield('content')
+    </div>
   </div>
-  <div class="clearfix"></div>
-</footer>
-<!-- /footer content -->
+  <!-- footer content -->
+  <footer>
+    <div class="pull-right">
+      {{ config('app.name') }} - <a href="{{ route('index') }}">{{ config('app.name') }}</a>
+    </div>
+    <div class="clearfix"></div>
+  </footer>
+  <!-- /footer content -->
 </div>
 </div>
 
