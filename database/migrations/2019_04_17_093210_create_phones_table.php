@@ -17,6 +17,7 @@ class CreatePhonesTable extends Migration
             $table->bigIncrements('id');
             $table->integer('code');
             $table->integer('phone');
+            $table->integer('user_id')->unsigned();
             $table->timestamps();
         });
     }
