@@ -1,33 +1,23 @@
 @extends('layouts.app')
 
-@section('content')
-
 <div class="alert alert-info alert-dismissible fade in" role="alert">
     <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-    <strong>Parece que tu cueenta está incompleta, te invitamos a <a style="color: orange" href="{{ route('account') }}" class="alert-link">rellenar los datos que faltan en tu cuenta</a> para que puedas accesar a todos los beneficios de la plataforma  </strong>
+    <strong>Parece que tu cuenta está incompleta, te invitamos a <a style="color: orange" href="{{ route('account') }}" class="alert-link">rellenar los datos que faltan en tu cuenta</a> para que puedas accesar a todos los beneficios de la plataforma  </strong>
   </div>
 
-    <div class="page-title">
-      <div class="title_left">
-        <h3>Plain Page</h3>
-      </div>
-    </div>
+@section('title-left')
+Plain page
+@endsection
 
-    <div class="clearfix"></div>
+@section('x-title')
+Plain page
+@endsection
 
-    <div class="row">
-      <div class="col-md-12 col-sm-12 col-xs-12">
-        <div class="x_panel">
-          <div class="x_title">
-            <h2>Plain Page</h2>
-            <div class="clearfix"></div>
-          </div>
-          <div class="x_content">
-              Add content to the page ...
-          </div>
-        </div>
-      </div>
-    </div>
+@section('content')
+Add content to the page ...
+@endsection
+
+@section('content')
 
 <script type="text/javascript">
 window.onload= () => {
