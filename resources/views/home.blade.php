@@ -17,13 +17,12 @@ Plain page
 Add content to the page ...
 @endsection
 
-@section('content')
-
 <script type="text/javascript">
 window.onload= () => {
   document.getElementById('open_modal').click();
 }
 </script>
+
     <button id="open_modal" style="display: none" type="button" class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-lg">Large modal</button>
 
     <div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-hidden="true">
@@ -41,11 +40,9 @@ window.onload= () => {
             <p>Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.</p>
           </div>
           <div class="modal-footer">
-            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
           </div>
 
         </div>
       </div>
     </div>
-
-@endsection
