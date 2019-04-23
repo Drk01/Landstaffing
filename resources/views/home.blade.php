@@ -2,17 +2,14 @@
 
 @section('content')
 
+<div class="alert alert-info alert-dismissible fade in" role="alert">
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+    <strong>Parece que tu cueenta está incompleta, te invitamos a <a style="color: orange" href="{{ route('account') }}" class="alert-link">rellenar los datos que faltan en tu cuenta</a> para que puedas accesar a todos los beneficios de la plataforma  </strong>
+  </div>
+
     <div class="page-title">
       <div class="title_left">
         <h3>Plain Page</h3>
-      </div>
-
-      <div class="title_right">
-        <div class="col-md-5 col-sm-5 col-xs-12 form-group pull-right top_search">
-          <div class="input-group">
-
-          </div>
-        </div>
       </div>
     </div>
 
