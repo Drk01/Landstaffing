@@ -86,7 +86,7 @@
             <ul class="dropdown-menu dropdown-usermenu pull-right">
               <li><a href="javascript:;">Perfíl</a></li>
               <li>
-                <a onclick="document.getElementById('myaccount').submit()"> Mis datos</a>
+                <a href="{{ route('account') }}">Mis datos</a>
               </li>
               </li>
               <li><a href="javascript:;"> Configuración </a></li>
@@ -152,7 +152,5 @@
 <form id="close_session" action="{{ route('logout') }}" method="post">
     {{ csrf_field() }}
   </form>
-<form action="{{ route('account') }}" method="GET" id="myaccount">
-</form>
 </body>
 </html>
