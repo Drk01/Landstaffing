@@ -15,7 +15,6 @@ class CreatePhonesTable extends Migration
     {
         Schema::create('phones', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->integer('code');
             $table->integer('phone');
             $table->integer('user_id')->unsigned();
             $table->timestamps();
