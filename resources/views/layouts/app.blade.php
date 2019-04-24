@@ -153,7 +153,6 @@
     {{ csrf_field() }}
   </form>
 <form action="{{ route('account') }}" method="GET" id="myaccount">
-    {{ csrf_field() }}
 </form>
 </body>
 </html>
