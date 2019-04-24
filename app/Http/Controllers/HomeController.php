@@ -3,6 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\User;
+use App\Phone;
+use App\Country;
 
 class HomeController extends Controller
 {
@@ -27,6 +30,15 @@ class HomeController extends Controller
     }
 
     public function account(){
+
+        return view('myaccount.myaccount')->with([
+            'User' => User::where('id',auth()->user()->id)->first(),
+            'Phone' => Phone::where('user_id',auth()->user()->id)->first(),
+            'Countries' => Country::all()
+        ]);
+    }
+
+    public function saveData(Request $request){
 
     }
 }
