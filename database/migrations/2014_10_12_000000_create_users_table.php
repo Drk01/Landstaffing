@@ -19,6 +19,8 @@ class CreateUsersTable extends Migration
             $table->string('lastname', 100);
             $table->string('motherLastname', 100);
             $table->string('email',50)->unique();
+            $table->string('empresa',100)->default('Sin empresa asignada');
+            $table->string('foto',100)->default('default.png');
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->rememberToken();
