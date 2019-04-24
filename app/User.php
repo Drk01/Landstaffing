@@ -5,6 +5,7 @@ namespace App;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
+use App\User;
 
 class User extends Authenticatable
 {
@@ -75,10 +76,25 @@ class User extends Authenticatable
     }
 
     public function phone(){
-        return $this->hasOne('App\Phone')->withTimestamps();
+        return $this->hasOne('App\Phone');
     }
 
     public function address(){
         return $this->hasOne('App\Address');
+    }
+
+    public function isNewUser()
+    {
+      if ($this->created_at == now()) {
+        return true;
+      }
+      return false;
+    }
+
+    public function hasFulfilledData(){
+        if(isset($this->phone()->phone) && isset($this->address()->id)){
+            return false;
+        }
+        return true;
     }
 }
