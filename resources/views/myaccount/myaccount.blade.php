@@ -107,7 +107,7 @@ Mis datos
     <div class="col-lg-6">
         <div class="panel panel-info">
             <div class="panel-heading">
-                <h3 class="panel-title">Datos que tenemos de tí: </h3>
+                <h3 class="panel-title">Datos que tenemos de usted: </h3>
             </div>
             <div class="panel-body">
                 <div class="row">
