@@ -30,10 +30,7 @@ class HomeController extends Controller
     }
 
     public function account(){
-
         return view('myaccount.myaccount')->with([
-            'User' => User::where('id',auth()->user()->id)->first(),
-            'Phone' => Phone::where('user_id',auth()->user()->id)->first(),
             'Countries' => Country::all()
         ]);
     }
