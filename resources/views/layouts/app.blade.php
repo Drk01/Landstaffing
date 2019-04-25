@@ -34,7 +34,7 @@
           <!-- menu profile quick info -->
           <div class="profile clearfix">
             <div class="profile_pic">
-              <img src="{{ asset('Panel/images/img.jpg') }}" alt="..." class="img-circle profile_img">
+              <img src="{{ asset('/storage/'.auth()->user()->foto) }}" alt="..." class="img-circle profile_img">
             </div>
             <div class="profile_info">
               <span>Bienvenido,</span>
@@ -80,7 +80,7 @@
         <ul class="nav navbar-nav navbar-right">
           <li class="">
             <a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-              <img src="{{ asset('Panel/images/img.jpg') }}" alt="">{{ auth()->user()->name }}
+              <img src="{{ asset('/storage/'.auth()->user()->foto) }}" alt="">{{ auth()->user()->name }}
               <span class=" fa fa-angle-down"></span>
             </a>
             <ul class="dropdown-menu dropdown-usermenu pull-right">
