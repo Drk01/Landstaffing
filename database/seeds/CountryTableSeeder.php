@@ -17,5 +17,12 @@ class CountryTableSeeder extends Seeder
             'created_at' => now(),
             'updated_at' => now()
         ]);
+
+        DB::table('countries')->insert([
+            'name' => 'Colombia',
+            'lada' => '57',
+            'created_at' => now(),
+            'updated_at' => now()
+        ]);
     }
 }
