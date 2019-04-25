@@ -37,7 +37,6 @@ class UserTableSeeder extends Seeder
         $user->lastname = 'example';
         $user->motherLastname = 'example';
         $user->empresa = 'Empresa de ejemplo';
-        $user->foto = 'img.png';
         $user->save();
         $user->roles()->attach($role_empleador);
         $user->phone()->create([
