@@ -22,3 +22,5 @@ Route::get('/panel', 'HomeController@index')->name('home');
 Route::get('/my-account', 'HomeController@account')->name('account');
 
 Route::post('/save-account-data','HomeController@saveData')->name('save-account-data');
+
+Route::resource('/orders', 'OrdersController');
