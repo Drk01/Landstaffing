@@ -92,9 +92,9 @@ class User extends Authenticatable
     }
 
     public function hasFulfilledData(){
-        if(isset($this->phone()->phone) && isset($this->address()->id)){
-            return false;
+        if($this->name && $this->lastname && $this->motherLastname && $this->empresa && $this->email && $this->foto != 'default.jpg' && $this->phone->phone && $this->address->estado && $this->address->ciudad && $this->address->calle && $this->address->extNumber){
+            return true;
         }
-        return true;
+        return false;
     }
 }
