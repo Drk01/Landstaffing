@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@if (auth()->user()->hasFulfilledData())
+@if (auth()->user()->hasFulfilledData() == false)
 <div class="alert alert-info alert-dismissible fade in" role="alert">
     <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
     <strong>Parece que tu cuenta está incompleta, te invitamos a <a style="color: orange" href="{{ route('account') }}" class="alert-link">rellenar los datos que faltan en tu cuenta</a> para que puedas accesar a todos los beneficios de la plataforma.</strong>
@@ -19,7 +19,7 @@ Plain page
 Add content to the page ...
 @endsection
 
-@if (auth()->user()->isNewUser())
+@if (auth()->user()->isNewUser() || auth()->user()->hasFulfilledData() == false)
   <script type="text/javascript">
   window.onload= () => {
     document.getElementById('open_modal').click();
