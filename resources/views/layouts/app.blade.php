@@ -52,6 +52,16 @@
               <h3>General</h3>
               <ul class="nav side-menu">
                 <li><a href="{{ route('home') }}"><i class="fa fa-home"></i> Inicio </a></li>
+
+                @if (auth()->user()->hasFulfilledData() && auth()->user()->hasRole('Empleador'))
+                <li><a><i class="fa fa-edit"></i> Órdenes <span class="fa fa-chevron-down"></span></a>
+                    <ul class="nav child_menu">
+                    <li><a href="form.html">Nueva orden</a></li>
+                    <li><a href="form_advanced.html">Listado de ordenes</a></li>
+                    <li><a href="form_validation.html">Historial de ordenes</a></li>
+                  </ul>
+                </li>
+                @endif
                 {{-- <li><a><i class="fa fa-edit"></i> Forms <span class="fa fa-chevron-down"></span></a>
                 <ul class="nav child_menu">
                 <li><a href="form.html">General Form</a></li>
