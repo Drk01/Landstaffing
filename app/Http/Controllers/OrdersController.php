@@ -28,7 +28,7 @@ class OrdersController extends Controller
      */
     public function create()
     { 
-        echo "AUTORIZADO";
+        return view('orders.create');
     }
 
     /**
