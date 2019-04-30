@@ -9,6 +9,7 @@ class OrdersController extends Controller
     public function __construct(){
         $this->middleware('auth');
         $this->middleware('Empleador');
+        $this->middleware('hasFulFilledData');
     }
     /**
      * Display a listing of the resource.
