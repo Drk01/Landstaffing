@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Order;
 
 class OrdersController extends Controller
 {
@@ -18,7 +19,7 @@ class OrdersController extends Controller
      */
     public function index()
     {
-        
+
     }
 
     /**
@@ -27,7 +28,7 @@ class OrdersController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function create()
-    { 
+    {
         return view('orders.create');
     }
 
