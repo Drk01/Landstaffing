@@ -97,4 +97,8 @@ class User extends Authenticatable
         }
         return false;
     }
+    public function abilities()
+    {
+        return $this->belongsToMany('App\Ability')->withTimestamps();
+    }
 }
