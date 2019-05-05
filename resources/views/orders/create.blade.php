@@ -5,8 +5,11 @@ Crear nueva orden
 @endsection
 
 @section('content')
+@php
 
-<form action="{{ route('orders.create') }}" method="post" autocomplete="off">
+@endphp
+<form action="{{ route('orders.store') }}" method="post" autocomplete="off">
+    @csrf
     <div class="form-group">
         <label for="name">Nombre del proyecto: </label>
         <input type="text" name="name" id="name" required class="form-control">
@@ -28,7 +31,7 @@ Crear nueva orden
     <div class="row">
         <div class="col-xs-6 form-group">
             <label for="endDate">Fecha de finalización: </label>
-            <input type="date" name="startTime" id="startTime" class="form-control">
+            <input type="date" name="endDate" id="startTime" class="form-control">
         </div>
         <div class="col-xs-6 form-group">
             <label for="endTime">Hora de finalización: </label>
@@ -36,43 +39,45 @@ Crear nueva orden
         </div>
     </div>
     <label for="personal">Personal requerido</label>
-    <div class="form-group">
-        <div id="personal">
-            <div class="col-xs-6">
-                <input type="number" name="numberP[]" class="form-control form-group" id="numper">
-            </div>
-            <div class="col-xs-6" id="fff">
-                <select name="personalT[]" class="form-control" id="typeper">
-                    <option></option>
-                </select>
-            </div>
+    <div class="form-group" id="personal" style="margin-buttom: 1%">
+        <div class="col-xs-6">
+            <input type="number" name="numberP[]" class="form-control" id="numper0">
         </div>
-        <div id="maspersonales"></div>
+        <div class="col-xs-5">
+            <select name="personalT[]" class="form-control" id="typeper0">
+                <option selected hidden disabled></option>
+                @foreach ($abilities as $ability)
+                    <option value="{{ $ability->id }}">{{ $ability->name }}</option>
+                @endforeach
+            </select>
+        </div>
+        <div class="col-xs-1">
+            <button disabled class="btn btn-danger btn-block" type="button"><i class="fa fa-trash"></i></button>
+        </div>
     </div>
-    <div class="form-group" style="margin-top: 5%">
+    <div class="form-group" id="form-footer" style="margin-top: 5%">
         <button class="btn btn-info btn-lg btn-block" onclick="agregarPersonal()" type="button">Añadir personal</button>
         <input type="submit" value="Enviar datos" class="btn btn-success btn-lg btn-block" style="margin-top: 1%">
     </div>
 </form>
 
 <script>
+    var click = 0;
 function agregarPersonal(){
+    var oficios = {!! $abilitiesJS !!};
+    click++;
+/*     document.getElementById('personal').append ='<div id="percol'+click+'"><div class="col-xs-6" style="margin: 1% 0"><input type="number" name="numberP[]" class="form-control" id="numper'+click+'"></div><div class="col-xs-5" style="margin: 1% 0"><select name="personalT[]" class="form-control" id="typeper'+click+'"><option selected hidden disabled></option></select></div><div class="col-xs-1" style="margin: 1% 0"><button id="eliminador'+click+'" onclick="eliminarPersonal('+click+')" class="btn btn-danger btn-block" type="button"><i class="fa fa-trash"></i></button></div></div>'; */
 
-    console.log(texto);
-    var oficios = ['A','B','C'];
+    $('#personal').append('<div id="percol'+click+'"><div class="col-xs-6" style="margin: 1% 0"><input type="number" name="numberP[]" class="form-control" id="numper'+click+'"></div><div class="col-xs-5" style="margin: 1% 0"><select name="personalT[]" class="form-control" id="typeper'+click+'"><option selected hidden disabled></option></select></div><div class="col-xs-1" style="margin: 1% 0"><button id="eliminador'+click+'" onclick="eliminarPersonal('+click+')" class="btn btn-danger btn-block" type="button"><i class="fa fa-trash"></i></button></div></div>');
+
     oficios.map((oficio) => {
-       texto.innerHTML = '<option>'+oficio+'</option>';
+       document.getElementById('typeper'+click).innerHTML = document.getElementById('typeper'+click).innerHTML +'<option value="'+oficio.id+'">'+oficio.name+'</option>';
     });
-  $('<input type="number" name="numberP[]" class="form-control form-group" style="margin-top: 1%">').insertAfter("#numper");
-  $('<select name="personalT[]" class="form-control form-group" style="margin-top: 2%" id="typeper"></select>').insertAfter("#typeper");
-
-    var texto = document.getElementsByTagName('select');        
-    oficios.map((oficio) => {
-       texto.innerHTML = '<option>'+oficio+'</option>';
-    });
-
-
 };
+
+function eliminarPersonal(number){
+        $("#percol"+number).remove();
+}
 </script>
 
 @endsection

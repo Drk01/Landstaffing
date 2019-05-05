@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Order;
+use App\Ability;
 
 class OrdersController extends Controller
 {
@@ -29,7 +30,10 @@ class OrdersController extends Controller
      */
     public function create()
     {
-        return view('orders.create');
+        return view('orders.create')->with([
+            'abilitiesJS' => json_encode(Ability::all()),
+            'abilities' => Ability::all()
+        ]);
     }
 
     /**
@@ -40,7 +44,7 @@ class OrdersController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        dd($request->all());
     }
 
     /**
