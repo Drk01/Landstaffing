@@ -75,24 +75,27 @@ class User extends Authenticatable
         return false;
     }
 
-    public function phone(){
+    public function phone()
+    {
         return $this->hasOne('App\Phone');
     }
 
-    public function address(){
+    public function address()
+    {
         return $this->hasOne('App\Address');
     }
 
     public function isNewUser()
     {
-      if ($this->created_at == now()) {
-        return true;
-      }
-      return false;
+        if ($this->created_at == now()) {
+            return true;
+        }
+        return false;
     }
 
-    public function hasFulfilledData(){
-        if($this->name && $this->lastname && $this->motherLastname && $this->empresa && $this->email && $this->foto != 'default.jpg' && $this->phone->phone && $this->address->estado && $this->address->ciudad && $this->address->calle && $this->address->extNumber){
+    public function hasFulfilledData()
+    {
+        if ($this->name && $this->lastname && $this->motherLastname && $this->empresa && $this->email && $this->foto != 'default.jpg' && $this->phone->phone && $this->address->estado && $this->address->ciudad && $this->address->calle && $this->address->extNumber) {
             return true;
         }
         return false;
@@ -100,5 +103,15 @@ class User extends Authenticatable
     public function abilities()
     {
         return $this->belongsToMany('App\Ability')->withTimestamps();
+    }
+
+    public function orders()
+    {
+        return $this->hasMany('App\Order');
+    }
+
+    public function personals()
+    {
+        return $this->hasMany('App\Personal');
     }
 }

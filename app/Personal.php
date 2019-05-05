@@ -4,17 +4,22 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Order extends Model
+class Personal extends Model
 {
     protected $guarded = [];
+
+    public function order()
+    {
+        return $this->belongsTo('App\Order');
+    }
 
     public function user()
     {
         return $this->belongsTo('App\User');
     }
 
-    public function personals()
+    public function abilities()
     {
-        return $this->hasMany('App\Personal');
+        return $this->hasMany('App\Ability');
     }
 }
