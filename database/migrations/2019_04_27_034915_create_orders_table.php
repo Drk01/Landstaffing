@@ -20,6 +20,10 @@ class CreateOrdersTable extends Migration
             $table->integer('user_id')->unsigned();
             $table->dateTime('startAt');
             $table->dateTime('endAt')->nullable();
+            $table->string('city', 100);
+            $table->string('street', 100);
+            $table->integer('extN')->nullable();
+            $table->longText('references')->nullable();
             $table->timestamps();
         });
     }
