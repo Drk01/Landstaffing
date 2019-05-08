@@ -16,7 +16,8 @@ class CreatePersonalsTable extends Migration
         Schema::create('personals', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->integer('order_id')->unsigned();
-            $table->integer('user_id')->unsigned();
+            $table->integer('user_id')->unsigned()->nullable();
+            $table->dateTime('assignedUser')->nullable();
             $table->integer('ability_id')->unsigned();
             $table->timestamps();
         });
