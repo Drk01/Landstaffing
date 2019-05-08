@@ -3,8 +3,10 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\User;
 use App\Order;
 use App\Ability;
+use App\Http\Requests\OrdersRequest;
 
 class OrdersController extends Controller
 {
@@ -42,9 +44,30 @@ class OrdersController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(OrdersRequest $request)
     {
-        dd($request->all());
+        $User = User::where('id',auth()->user()->id)->first();
+        $User->orders()->create([
+            'name' => $request->name,
+            'description' => $request->description,
+            'startAt' => date('Y-m-d H:i:s', strtotime($request->startDate.' '.$request->startTime)),
+            'endAt' => date('Y-m-d H:i:s', strtotime($request->endDate.' '.$request->endTime)),
+            'city' => $request->city,
+            'street' => $request->street,
+            'extN' => $request->extN,
+            'references' => $request->references
+        ]);
+
+        $Order = Order::where('user_id',auth()->user()->id)->latest()->first();
+
+        foreach ($request->numberP as $key => $value) {
+            for ($i=0; $i < $value; $i++) {
+                $Order->personals()->create([
+                    'ability_id' => $request->personalT[$key]
+                ]);
+            }
+        }
+        return redirect(route('orders.create'));
     }
 
     /**
