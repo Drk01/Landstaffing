@@ -10,20 +10,20 @@
   <title>{{ config('app.name') }} </title>
 
   <!-- Bootstrap -->
-  <link href="{{ asset('Panel/vendors/bootstrap/dist/css/bootstrap.min.css') }}" rel="stylesheet">
+  <link href="{{ asset('Panel/assets/vendors/bootstrap/dist/css/bootstrap.min.css') }}" rel="stylesheet">
   <!-- Font Awesome -->
-  <link href="{{ asset('Panel/vendors/font-awesome/css/font-awesome.min.css') }}" rel="stylesheet">
+  <link href="{{ asset('Panel/assets/vendors/font-awesome/css/font-awesome.min.css') }}" rel="stylesheet">
   <!-- NProgress -->
-  <link href="{{ asset('Panel/vendors/nprogress/nprogress.css') }}" rel="stylesheet">
+  <link href="{{ asset('Panel/assets/vendors/nprogress/nprogress.css') }}" rel="stylesheet">
 
   <!-- Custom Theme Style -->
-  <link href="{{ asset('Panel/build/css/custom.min.css') }}" rel="stylesheet">
+  <link href="{{ asset('Panel/assets/build/css/custom.min.css') }}" rel="stylesheet">
   <!-- Datatable -->
-  <link href="{{ asset('Panel/vendors/datatables.net-bs/css/dataTables.bootstrap.min.css') }}" rel="stylesheet">
-  <link href="{{ asset('Panel/vendors/datatables.net-buttons-bs/css/buttons.bootstrap.min.css') }}" rel="stylesheet">
-  <link href="{{ asset('Panel/vendors/datatables.net-fixedheader-bs/css/fixedHeader.bootstrap.min.css') }}" rel="stylesheet">
-  <link href="{{ asset('Panel/vendors/datatables.net-responsive-bs/css/responsive.bootstrap.min.css') }}" rel="stylesheet">
-  <link href="{{ asset('Panel/vendors/datatables.net-scroller-bs/css/scroller.bootstrap.min.css') }}" rel="stylesheet">
+  <link href="{{ asset('Panel/assets/vendors/datatables.net-bs/css/dataTables.bootstrap.min.css') }}" rel="stylesheet">
+  <link href="{{ asset('Panel/assets/vendors/datatables.net-buttons-bs/css/buttons.bootstrap.min.css') }}" rel="stylesheet">
+  <link href="{{ asset('Panel/assets/vendors/datatables.net-fixedheader-bs/css/fixedHeader.bootstrap.min.css') }}" rel="stylesheet">
+  <link href="{{ asset('Panel/assets/vendors/datatables.net-responsive-bs/css/responsive.bootstrap.min.css') }}" rel="stylesheet">
+  <link href="{{ asset('Panel/assets/vendors/datatables.net-scroller-bs/css/scroller.bootstrap.min.css') }}" rel="stylesheet">
 </head>
 
 <body class="nav-md">
@@ -154,32 +154,32 @@
 </div>
 
 <!-- jQuery -->
-<script src="{{ asset('Panel/vendors/jquery/dist/jquery.min.js') }}"></script>
+<script src="{{ asset('Panel/assets/vendors/jquery/dist/jquery.min.js') }}"></script>
 <!-- Bootstrap -->
-<script src="{{ asset('Panel/vendors/bootstrap/dist/js/bootstrap.min.js') }}"></script>
+<script src="{{ asset('Panel/assets/vendors/bootstrap/dist/js/bootstrap.min.js') }}"></script>
 <!-- FastClick -->
-<script src="{{ asset('Panel/vendors/fastclick/lib/fastclick.js') }}"></script>
+<script src="{{ asset('Panel/assets/vendors/fastclick/lib/fastclick.js') }}"></script>
 <!-- NProgress -->
-<script src="{{ asset('Panel/vendors/nprogress/nprogress.js') }}"></script>
+<script src="{{ asset('Panel/assets/vendors/nprogress/nprogress.js') }}"></script>
 
 <!-- Custom Theme Scripts -->
-<script src="{{ asset('Panel/build/js/custom.min.js') }}"></script>
+<script src="{{ asset('Panel/assets/build/js/custom.min.js') }}"></script>
 <!-- Datatable -->
-<script src="Panel/vendors/datatables.net/js/jquery.dataTables.min.js"></script>
-<script src="Panel/vendors/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
-<script src="Panel/vendors/datatables.net-buttons/js/dataTables.buttons.min.js"></script>
-<script src="Panel/vendors/datatables.net-buttons-bs/js/buttons.bootstrap.min.js"></script>
-<script src="Panel/vendors/datatables.net-buttons/js/buttons.flash.min.js"></script>
-<script src="Panel/vendors/datatables.net-buttons/js/buttons.html5.min.js"></script>
-<script src="Panel/vendors/datatables.net-buttons/js/buttons.print.min.js"></script>
-<script src="Panel/vendors/datatables.net-fixedheader/js/dataTables.fixedHeader.min.js"></script>
-<script src="Panel/vendors/datatables.net-keytable/js/dataTables.keyTable.min.js"></script>
-<script src="Panel/vendors/datatables.net-responsive/js/dataTables.responsive.min.js"></script>
-<script src="Panel/vendors/datatables.net-responsive-bs/js/responsive.bootstrap.js"></script>
-<script src="Panel/vendors/datatables.net-scroller/js/dataTables.scroller.min.js"></script>
-<script src="Panel/vendors/jszip/dist/jszip.min.js"></script>
-<script src="Panel/vendors/pdfmake/build/pdfmake.min.js"></script>
-<script src="Panel/vendors/pdfmake/build/vfs_fonts.js"></script>
+<script src="Panel/assets/vendors/datatables.net/js/jquery.dataTables.min.js"></script>
+<script src="Panel/assets/vendors/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
+<script src="Panel/assets/vendors/datatables.net-buttons/js/dataTables.buttons.min.js"></script>
+<script src="Panel/assets/vendors/datatables.net-buttons-bs/js/buttons.bootstrap.min.js"></script>
+<script src="Panel/assets/vendors/datatables.net-buttons/js/buttons.flash.min.js"></script>
+<script src="Panel/assets/vendors/datatables.net-buttons/js/buttons.html5.min.js"></script>
+<script src="Panel/assets/vendors/datatables.net-buttons/js/buttons.print.min.js"></script>
+<script src="Panel/assets/vendors/datatables.net-fixedheader/js/dataTables.fixedHeader.min.js"></script>
+<script src="Panel/assets/vendors/datatables.net-keytable/js/dataTables.keyTable.min.js"></script>
+<script src="Panel/assets/vendors/datatables.net-responsive/js/dataTables.responsive.min.js"></script>
+<script src="Panel/assets/vendors/datatables.net-responsive-bs/js/responsive.bootstrap.js"></script>
+<script src="Panel/assets/vendors/datatables.net-scroller/js/dataTables.scroller.min.js"></script>
+<script src="Panel/assets/vendors/jszip/dist/jszip.min.js"></script>
+<script src="Panel/assets/vendors/pdfmake/build/pdfmake.min.js"></script>
+<script src="Panel/assets/vendors/pdfmake/build/vfs_fonts.js"></script>
 
 <form id="close_session" action="{{ route('logout') }}" method="post">
     {{ csrf_field() }}

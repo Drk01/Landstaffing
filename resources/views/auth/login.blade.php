@@ -11,19 +11,19 @@
     <title>{{ config('app.name') }} | Iniciar sesión </title>
 
     <!-- Bootstrap -->
-    <link href="{{ asset('Panel/vendors/bootstrap/dist/css/bootstrap.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('Panel/assets/vendors/bootstrap/dist/css/bootstrap.min.css') }}" rel="stylesheet">
     <!-- Font Awesome -->
-    <link href="{{ asset('Panel/vendors/font-awesome/css/font-awesome.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('Panel/assets/vendors/font-awesome/css/font-awesome.min.css') }}" rel="stylesheet">
     <!-- NProgress -->
-    <link href="{{ asset('Panel/vendors/nprogress/nprogress.css') }}" rel="stylesheet">
+    <link href="{{ asset('Panel/assets/vendors/nprogress/nprogress.css') }}" rel="stylesheet">
     <!-- Animate.css -->
-    <link href="{{ asset('Panel/vendors/animate.css/animate.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('Panel/assets/vendors/animate.css/animate.min.css') }}" rel="stylesheet">
     <!-- Select2 -->
-    <link rel="stylesheet" href="{{ asset('Panel/vendors/select2/dist/css/select2.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('Panel/assets/vendors/select2/dist/css/select2.min.css') }}">
 
 
     <!-- Custom Theme Style -->
-    <link href="{{ asset('Panel/build/css/custom.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('Panel/assets/build/css/custom.min.css') }}" rel="stylesheet">
 </head>
 
 <body class="login">
@@ -71,7 +71,7 @@
         </div>
     </div>
 
-    <script src="{{ asset('Panel/vendors/select2/dist/js/select2.full.min.js') }}"></script>
+    <script src="{{ asset('Panel/assets/vendors/select2/dist/js/select2.full.min.js') }}"></script>
 
     <script>
     $(document).ready(function() {
