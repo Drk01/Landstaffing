@@ -11,6 +11,9 @@ const mix = require('laravel-mix');
  |
  */
 
+mix.copyDirectory('node_modules/gentelella', 'public/Panel/assets');
+
+
 mix.react('resources/js/app.js', 'public')
    .sass('resources/sass/app.scss', 'public/css');
 
