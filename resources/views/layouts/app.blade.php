@@ -65,7 +65,6 @@
                     <ul class="nav child_menu">
                     <li><a href="{{ route('orders.create') }}">Nueva orden</a></li>
                     <li><a href="{{ route('orders.index') }}">Listado de ordenes</a></li>
-                    <li><a href="form_validation.html">Historial de ordenes</a></li>
                   </ul>
                 </li>
                 @endif
