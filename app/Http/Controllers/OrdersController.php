@@ -67,7 +67,7 @@ class OrdersController extends Controller
                 ]);
             }
         }
-        return redirect(route('orders.create'));
+        return redirect(route('orders.index'));
     }
 
     /**
