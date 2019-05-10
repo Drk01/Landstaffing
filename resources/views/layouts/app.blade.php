@@ -15,7 +15,8 @@
   <link href="{{ asset('Panel/assets/vendors/font-awesome/css/font-awesome.min.css') }}" rel="stylesheet">
   <!-- NProgress -->
   <link href="{{ asset('Panel/assets/vendors/nprogress/nprogress.css') }}" rel="stylesheet">
-
+  <!-- iCheck -->
+  <link href="{{ asset('Panel/assets/vendors/iCheck/skins/flat/green.css') }}" rel="stylesheet">
   <!-- Custom Theme Style -->
   <link href="{{ asset('Panel/assets/build/css/custom.min.css') }}" rel="stylesheet">
   <!-- Datatable -->
@@ -161,7 +162,8 @@
 <script src="{{ asset('Panel/assets/vendors/fastclick/lib/fastclick.js') }}"></script>
 <!-- NProgress -->
 <script src="{{ asset('Panel/assets/vendors/nprogress/nprogress.js') }}"></script>
-
+<!-- iCheck -->
+<script src="{{ asset('Panel/assets/vendors/iCheck/icheck.min.js') }}"></script>
 <!-- Custom Theme Scripts -->
 <script src="{{ asset('Panel/assets/build/js/custom.min.js') }}"></script>
 <!-- Datatable -->
