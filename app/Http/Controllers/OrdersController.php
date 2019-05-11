@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\User;
 use App\Order;
 use App\Ability;
+use App\Personal;
 use App\Http\Requests\OrdersRequest;
 
 class OrdersController extends Controller
@@ -80,7 +81,18 @@ class OrdersController extends Controller
      */
     public function show($id)
     {
-        //
+        $IDs = Personal::where('order_id',$id)->get()->pluck('ability_id');
+
+        $Personals = [];
+        foreach (Ability::all() as $key => $ability) {
+            $Personals = $Personals + [$ability->id => Personal::where('order_id',$id)->where('ability_id',$key+1)->count()];
+        }
+
+        return redirect(route('orders.index'))->with([
+            'SOrder' => Order::where('id',$id)->first(),
+            'Personals' => $Personals,
+            'Abilities' => Ability::all()
+        ]);
     }
 
     /**
