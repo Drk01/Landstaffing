@@ -103,7 +103,11 @@ class OrdersController extends Controller
      */
     public function edit($id)
     {
-        //
+        return view('orders.create')->with([
+            'abilitiesJS' => json_encode(Ability::all()),
+            'abilities' => Ability::all(),
+            'Orden' => Order::where('id',$id)->first()
+        ]);
     }
 
     /**
