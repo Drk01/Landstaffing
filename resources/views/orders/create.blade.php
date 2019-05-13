@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('title-left')
-Crear nueva orden
+{{ $Accion }} orden
 @endsection
 
 @section('content')
