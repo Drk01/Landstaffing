@@ -37,7 +37,8 @@ class OrdersController extends Controller
     {
         return view('orders.create')->with([
             'abilitiesJS' => json_encode(Ability::all()),
-            'abilities' => Ability::all()
+            'abilities' => Ability::all(),
+            'Accion' => 'Crear'
         ]);
     }
 
@@ -106,7 +107,8 @@ class OrdersController extends Controller
         return view('orders.create')->with([
             'abilitiesJS' => json_encode(Ability::all()),
             'abilities' => Ability::all(),
-            'Orden' => Order::where('id',$id)->first()
+            'Orden' => Order::where('id',$id)->first(),
+            'Accion' => 'Editar'
         ]);
     }
 
