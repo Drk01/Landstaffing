@@ -104,16 +104,21 @@ class OrdersController extends Controller
      */
     public function edit($id)
     {
-        $FechaInicio = Order::where('id',$id)->first()->startAt;
+        $Orden = Order::where('id',$id)->first();
+        $FechaInicio = $Orden->startAt;
         if(now()->diffInDays($FechaInicio) < 1){
             return redirect()->back()->withErrors(['No puedes modificar una orden que esté a menos de 24 horas de ocurrir']);
         }
+        $startDate = explode(' ',$Orden->startAt);
+        $endDate = explode(' ',$Orden->endAt);
 
         return view('orders.create')->with([
             'abilitiesJS' => json_encode(Ability::all()),
             'abilities' => Ability::all(),
-            'Orden' => Order::where('id',$id)->first(),
-            'Accion' => 'Editar'
+            'Orden' => $Orden,
+            'Accion' => 'Editar',
+            'startDate' => $startDate,
+            'endDate' => $endDate
         ]);
     }
 
