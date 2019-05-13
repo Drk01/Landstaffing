@@ -131,7 +131,19 @@ class OrdersController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $Order = Order::where('id',$id)->first();
+        $Order->update([
+            'name' => $request->name,
+            'description' => $request->description,
+            'startAt' => date('Y-m-d H:i:s', strtotime($request->startDate.' '.$request->startTime)),
+            'endAt' => date('Y-m-d H:i:s', strtotime($request->endDate.' '.$request->endTime)),
+            'city' => $request->city,
+            'street' => $request->street,
+            'extN' => $request->extN,
+            'references' => $request->references
+        ]);
+
+        return redirect(route('orders.index'));
     }
 
     /**
