@@ -76,6 +76,14 @@
                                       </ul>
                                   </li>
                                   @endif
+                                  @if (auth()->user()->hasFulfilledData() && auth()->user()->hasRole('Administrativo'))
+                                  <li><a><i class="fa fa-edit"></i> Habilidades <span class="fa fa-chevron-down"></span></a>
+                                      <ul class="nav child_menu">
+                                          <li><a href="{{ route('abilities.create') }}">Nueva habilidad</a></li>
+                                          <li><a href="{{ route('abilities.index') }}">Listado de habilidades</a></li>
+                                      </ul>
+                                  </li>
+                                  @endif
                                   {{-- <li><a><i class="fa fa-edit"></i> Forms <span class="fa fa-chevron-down"></span></a>
                 <ul class="nav child_menu">
                 <li><a href="form.html">General Form</a></li>
