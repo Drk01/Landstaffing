@@ -44,7 +44,16 @@ class AbilitiesController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $validate = $request->validate([
+            'name' => 'required|unique:abilities,name',
+            'description' => 'required|unique:abilities,description'
+        ]);
+        $Ability = new Ability;
+        $Ability->name = $request->name;
+        $Ability->description = $request->description;
+        $Ability->save();
+
+        return redirect(route('abilities.index'));
     }
 
     /**
