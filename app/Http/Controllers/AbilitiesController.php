@@ -64,7 +64,9 @@ class AbilitiesController extends Controller
      */
     public function show($id)
     {
-        //
+        return redirect(route('abilities.index'))->with([
+            'Ability' => Ability::where('id',$id)->first()
+        ]);
     }
 
     /**
@@ -75,7 +77,10 @@ class AbilitiesController extends Controller
      */
     public function edit($id)
     {
-        //
+        return view('abilities.create')->with([
+            'Ability' => Ability::where('id',$id)->first(),
+            'Accion' => 'Editar'
+        ]);
     }
 
     /**
@@ -87,7 +92,12 @@ class AbilitiesController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $Ability = Ability::where('id',$id)->first();
+        $Ability->name = $request->name;
+        $Ability->description = $request->description;
+        $Ability->save();
+
+        return redirect(route('abilities.index'));
     }
 
     /**
