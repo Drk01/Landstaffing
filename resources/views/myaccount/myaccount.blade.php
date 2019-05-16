@@ -122,7 +122,9 @@ Mis datos
                     </div>
                     <div class="col-md-12">
                         <h4><strong>Email: </strong> {{ auth()->user()->email }}</h4>
+                        @if (!empty(auth()->user()->phone->phone))
                         <h4><strong>Teléfono:</strong> {{ auth()->user()->phone->phone }}</h4>
+                        @endif
                         <h4><strong>País:</strong> {{ auth()->user()->address->country->first()->name }}</h4>
                         <h4><strong>Estado:</strong> {{ auth()->user()->address->estado }}</h4>
                         <h4><strong>Ciudad: </strong>{{ auth()->user()->address->ciudad }}</h4>
