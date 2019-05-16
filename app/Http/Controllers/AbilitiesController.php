@@ -31,7 +31,9 @@ class AbilitiesController extends Controller
      */
     public function create()
     {
-        //
+        return view('abilities.create')->with([
+            'Accion' => 'Crear'
+        ]);
     }
 
     /**
