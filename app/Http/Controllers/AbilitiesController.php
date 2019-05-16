@@ -64,7 +64,9 @@ class AbilitiesController extends Controller
      */
     public function show($id)
     {
-        //
+        return redirect(route('abilities.index'))->with([
+            'Ability' => Ability::where('id',$id)->first()
+        ]);
     }
 
     /**
