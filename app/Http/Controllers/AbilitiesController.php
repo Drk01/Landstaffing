@@ -108,6 +108,9 @@ class AbilitiesController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $Ability = Ability::where('id',$id)->first();
+        $Ability->delete();
+
+        return redirect()->back();
     }
 }
