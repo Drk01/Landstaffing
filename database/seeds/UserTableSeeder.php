@@ -72,5 +72,17 @@ class UserTableSeeder extends Seeder
         $user->password = bcrypt('secret');
         $user->save();
         $user->roles()->attach($role_empleado);
+        $user->phone()->create([
+            'phone' => '1234567890'
+        ]);
+        $user->address()->create([
+            'estado' => 'Estado',
+            'ciudad' => 'Ciudad',
+            'calle' => 'Calle',
+            'extNumber' => '10',
+            'reference' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, ipsam incidunt eligendi nihil assumenda id voluptas natus nobis esse! Ad distinctio iusto beatae modi fugiat corporis ea, deserunt voluptas voluptate.'
+        ]);
+        $Address = Address::all()->last();
+        $Address->country()->attach($Pais);
     }
 }
