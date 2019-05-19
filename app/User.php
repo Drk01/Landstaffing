@@ -95,7 +95,7 @@ class User extends Authenticatable
 
     public function hasFulfilledData()
     {
-        if ($this->name && $this->lastname && $this->motherLastname && $this->empresa && $this->email && $this->foto != 'default.jpg' && empty($this->phone->phone) && $this->address->estado && $this->address->ciudad && $this->address->calle && $this->address->extNumber) {
+        if ($this->name && $this->lastname && $this->motherLastname && $this->empresa && $this->email && $this->foto != 'default.jpg' && !empty($this->phone->phone) && $this->address->estado && $this->address->ciudad && $this->address->calle && $this->address->extNumber) {
             return true;
         }
         return false;
