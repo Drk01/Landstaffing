@@ -156,4 +156,11 @@ class OrdersController extends Controller
     {
         //
     }
+
+    /**
+     * Función que retornará las ordenes en las que el empleado está trabajando.
+     */
+    public function working($id){
+    }
+    
 }

@@ -26,3 +26,5 @@ Route::post('/save-account-data','HomeController@saveData')->name('save-account-
 Route::resource('/orders', 'OrdersController');
 
 Route::resource('/abilities', 'AbilitiesController');
+
+Route::get('/working/{userid}','OrdersController@working')->name('working');
