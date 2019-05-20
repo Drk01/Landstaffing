@@ -84,6 +84,14 @@
                                       </ul>
                                   </li>
                                   @endif
+                                  @if (auth()->user()->hasFulfilledData() && auth()->user()->hasRole('Empleado'))
+                                  <li><a><i class="fa fa-edit"></i> Empleos <span class="fa fa-chevron-down"></span></a>
+                                      <ul class="nav child_menu">
+                                          <li><a onclick="document.getElementById('MisEmpleos').submit()">Mis empleos</a></li>
+                                      </ul>
+                                      <form action="{{ route('working',auth()->user()->id) }}" method="get" id="MisEmpleos">@csrf</form>
+                                  </li>
+                                  @endif
                                   {{-- <li><a><i class="fa fa-edit"></i> Forms <span class="fa fa-chevron-down"></span></a>
                 <ul class="nav child_menu">
                 <li><a href="form.html">General Form</a></li>
