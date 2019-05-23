@@ -14,6 +14,7 @@ class OrdersController extends Controller
     public function __construct(){
         $this->middleware('auth');
         $this->middleware('Empleador')->only(['index','create','store','show','edit','update','destroy']);
+        $this->middleware('Empleado')->only(['working']);
         $this->middleware('hasFulFilledData');
     }
     /**
