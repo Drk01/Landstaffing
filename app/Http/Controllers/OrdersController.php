@@ -85,7 +85,9 @@ class OrdersController extends Controller
     {
         if (auth()->user()->hasRole('Empleado')) {
             return redirect()->back()->with([
-                'SOrder' => Order::where('id',$id)->first()
+                'SOrder' => Order::where('id',$id)->first(),
+                'Boss' => User::where('id',Order::where('id',$id)->first()->user_id)->first(),
+                'BossPhone' => User::where('id',Order::where('id',$id)->first()->user_id)->first()->address->country->first()->lada.' '.User::where('id',Order::where('id',$id)->first()->user_id)->first()->phone->phone
             ]);
         }
 
@@ -168,6 +170,11 @@ class OrdersController extends Controller
      * Función que retornará las ordenes en las que el empleado está trabajando.
      */
     public function working($id){
+        return view('working.index')->with([
+            'Personals' => Personal::where('user_id',auth()->user()->id)->get(),
+            'Orders' => Order::all(),
+            'Abilities' => Ability::all()
+        ]);
     }
     
 }
