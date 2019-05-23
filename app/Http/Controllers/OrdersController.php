@@ -13,7 +13,7 @@ class OrdersController extends Controller
 {
     public function __construct(){
         $this->middleware('auth');
-        $this->middleware('Empleador')->only(['index','create','store','show','edit','update','destroy']);
+        $this->middleware('Empleador')->only(['index','create','store','edit','update','destroy']);
         $this->middleware('Empleado')->only(['working']);
         $this->middleware('hasFulFilledData');
     }
@@ -83,6 +83,12 @@ class OrdersController extends Controller
      */
     public function show($id)
     {
+        if (auth()->user()->hasRole('Empleado')) {
+            return redirect()->back()->with([
+                'SOrder' => Order::where('id',$id)->first()
+            ]);
+        }
+
         $IDs = Personal::where('order_id',$id)->get()->pluck('ability_id');
 
         $Personals = [];
