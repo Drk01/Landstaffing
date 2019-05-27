@@ -89,4 +89,10 @@ class HomeController extends Controller
 
         return redirect(route('account'));
     }
+
+    public function editCurriculum(){
+        return view('curriculum.index')->with([
+            'Curriculum' => User::where('id',auth()->user()->id)->first()->curriculum()->first()->curriculum
+        ]);
+    }
 }

@@ -114,4 +114,9 @@ class User extends Authenticatable
     {
         return $this->hasMany('App\Personal');
     }
+
+    public function curriculum()
+    {
+        return $this->hasOne('App\Curriculum');
+    }
 }

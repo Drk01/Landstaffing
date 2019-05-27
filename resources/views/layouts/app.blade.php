@@ -91,6 +91,9 @@
                                       </ul>
                                       <form action="{{ route('working',auth()->user()->id) }}" method="get" id="MisEmpleos">@csrf</form>
                                   </li>
+                                  <li><a onclick="document.getElementById('MiCurriculum').submit()"><i class="fa fa-edit"></i> Currículum </a>
+                                    <form action="{{ route('curriculum',auth()->user()->id) }}" method="get" id="MiCurriculum">@csrf</form>
+                                </li>
                                   @endif
                                   {{-- <li><a><i class="fa fa-edit"></i> Forms <span class="fa fa-chevron-down"></span></a>
                 <ul class="nav child_menu">
