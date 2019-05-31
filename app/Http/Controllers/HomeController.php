@@ -7,6 +7,7 @@ use App\User;
 use App\Phone;
 use App\Country;
 use App\Address;
+use App\CStatus;
 
 class HomeController extends Controller
 {
@@ -92,7 +93,30 @@ class HomeController extends Controller
 
     public function editCurriculum(){
         return view('curriculum.index')->with([
-            'Curriculum' => User::where('id',auth()->user()->id)->first()->curriculum()->first()->curriculum
+            'Curriculum' => User::where('id',auth()->user()->id)->first()->curriculum()->first()
+        ]);
+    }
+
+    public function saveCurriculum(Request $request, $id){
+        $Validator = $request->validate([
+            'curriculum' => 'required|string'
+        ]);
+
+        $User = User::where('id',auth()->user()->id)->first();
+        $User->curriculum()->updateOrInsert(
+            ['user_id' => auth()->user()->id],
+            ['curriculum' => $request->curriculum]
+        );
+        $User->save();
+
+        if($User->curriculum()->first()->status()->count() > 0){
+            $User->curriculum()->first()->status()->detach();
+        }
+
+        $User->curriculum()->first()->status()->attach(1);
+
+        return redirect()->back()->with([
+            'success' => 'Su curriculum ha sido enviado a revisión.'
         ]);
     }
 }
