@@ -8,6 +8,6 @@ class Cstatus extends Model
 {
     public function curriculum()
     {
-        return $this->belongsToMany('App\Curriculum');
+        return $this->belongsToMany('App\Curriculum')->withTimestamps();
     }
 }
