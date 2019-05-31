@@ -30,3 +30,5 @@ Route::resource('/abilities', 'AbilitiesController');
 Route::get('/working/{userid}','OrdersController@working')->name('working');
 
 Route::get('/curriculum/{userid}','HomeController@editCurriculum')->name('curriculum');
+
+Route::put('curriculum/{userid}','HomeController@saveCurriculum') ;
