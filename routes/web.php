@@ -33,3 +33,6 @@ Route::group(['prefix' => 'curriculum'], function () {
     Route::get('{userid}','HomeController@editCurriculum')->name('curriculum');
     Route::put('{userid}','HomeController@saveCurriculum')->name('putCurriculum');
 });
+
+Route::group(['prefix' => 'moderate'], function () {
+});
