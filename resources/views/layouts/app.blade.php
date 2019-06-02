@@ -83,6 +83,10 @@
                                           <li><a href="{{ route('abilities.index') }}">Listado de habilidades</a></li>
                                       </ul>
                                   </li>
+                                  <li><a><i class="fa fa-edit"></i> Curriculums <span class="fa fa-chevron-down"></span></a>
+                                    <ul class="nav child_menu">
+                                    </ul>
+                                  </li>
                                   @endif
                                   @if (auth()->user()->hasFulfilledData() && auth()->user()->hasRole('Empleado'))
                                   <li><a><i class="fa fa-edit"></i> Empleos <span class="fa fa-chevron-down"></span></a>
