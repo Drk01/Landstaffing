@@ -35,4 +35,5 @@ Route::group(['prefix' => 'curriculum'], function () {
 });
 
 Route::group(['prefix' => 'moderate'], function () {
+    Route::get('','ModerateController@index')->name('ModerateList');
 });
