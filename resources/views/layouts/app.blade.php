@@ -85,6 +85,7 @@
                                   </li>
                                   <li><a><i class="fa fa-edit"></i> Curriculums <span class="fa fa-chevron-down"></span></a>
                                     <ul class="nav child_menu">
+                                        <li><a href="{{ route('ModerateList') }}">Curriculums por moderar</a></li>
                                     </ul>
                                   </li>
                                   @endif
