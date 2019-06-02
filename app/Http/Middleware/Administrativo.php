@@ -15,7 +15,7 @@ class Administrativo
      */
     public function handle($request, Closure $next)
     {
-        if(auth()->user()->roles()->first()->id == 2){
+        if(auth()->user()->roles()->first()->id == 1){
             return $next($request);
         }
         abort(401,'No autorizado');
