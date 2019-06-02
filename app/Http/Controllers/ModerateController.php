@@ -14,4 +14,17 @@ class ModerateController extends Controller
         $this->middleware('auth');
         $this->middleware('Administrador');
     }
+
+    /**
+     * Consulta todas los curriculums que no hayan sido revisados y los retorna junto con la vista ModerateCurriculums.index
+     *
+     * @return array
+     */
+    public function index(){
+        $Usuarios = User::all();
+        return view('ModerateCurriculums.index')->with([
+            'Usuarios' => $Usuarios
+        ]);
+    }
+
 }
