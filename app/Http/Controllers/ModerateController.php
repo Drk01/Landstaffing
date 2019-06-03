@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 use App\User;
 use App\Curriculum;
 use App\Cstatus;
-use App\Abilities;
+use App\Ability;
 
 class ModerateController extends Controller
 {
