@@ -31,6 +31,7 @@
           rel="stylesheet">
       <link href="{{ asset('Panel/assets/vendors/datatables.net-scroller-bs/css/scroller.bootstrap.min.css') }}"
           rel="stylesheet">
+      <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.7/css/select2.min.css" rel="stylesheet" />
   </head>
 
   <body class="nav-md">
@@ -199,6 +200,7 @@
 
       <!-- jQuery -->
       <script src="{{ asset('Panel/assets/vendors/jquery/dist/jquery.min.js') }}"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.7/js/select2.min.js"></script>
       <!-- Bootstrap -->
       <script src="{{ asset('Panel/assets/vendors/bootstrap/dist/js/bootstrap.min.js') }}"></script>
       <!-- FastClick -->
