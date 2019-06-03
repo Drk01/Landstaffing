@@ -33,4 +33,19 @@ class ModerateController extends Controller
         'Puestos' => Ability::all()
       ]);
     }
+
+    public function update(Request $request, $id){
+        $validador = $request->validate([
+          'abilities' => 'array|required'
+        ]);
+
+        $user = User::where('id',$id)->first();
+        foreach ($request->abilities as $key => $ability) {
+          $user->abilities()->attach($ability);
+        }
+
+        $user->curriculum()->first()->status()->sync(2);
+
+        return redirect(route('ModerateList'));
+    }
 }
