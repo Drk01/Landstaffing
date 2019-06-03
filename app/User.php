@@ -97,10 +97,20 @@ class User extends Authenticatable
 
     public function hasFulfilledData()
     {
+      if ($this->roles()->first()->id == 3) {
+        if ($this->hasCurriculum() && $this->hasAbilities()) {
+          if ($this->name && $this->lastname && $this->motherLastname && $this->empresa && $this->email && $this->foto != 'default.jpg' && !empty($this->phone->phone) && $this->address->estado && $this->address->ciudad && $this->address->calle && $this->address->extNumber) {
+              return true;
+          }
+          return false;
+        }
+        return false;
+      }else{
         if ($this->name && $this->lastname && $this->motherLastname && $this->empresa && $this->email && $this->foto != 'default.jpg' && !empty($this->phone->phone) && $this->address->estado && $this->address->ciudad && $this->address->calle && $this->address->extNumber) {
             return true;
         }
         return false;
+      }
     }
     public function abilities()
     {
