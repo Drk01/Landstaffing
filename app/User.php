@@ -121,4 +121,19 @@ class User extends Authenticatable
     {
         return $this->hasOne('App\Curriculum');
     }
+
+    public function hasCurriculum(){
+        if($this->curriculum()->id){
+            return true;
+        }
+
+        return false;
+    }
+
+    public function hasAbilities(){
+        if($this->abilities()->count() > 0){
+            return true;
+        }
+        return false;
+    }
 }
