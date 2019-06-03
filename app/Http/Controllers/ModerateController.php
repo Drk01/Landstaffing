@@ -27,4 +27,10 @@ class ModerateController extends Controller
         ]);
     }
 
+    public function edit($id){
+      return view('ModerateCurriculums.moderate')->with([
+        'Usuario' => User::where('id',$id)->first(),
+        'Puestos' => Ability::all()
+      ]);
+    }
 }
