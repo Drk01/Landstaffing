@@ -37,4 +37,5 @@ Route::group(['prefix' => 'curriculum'], function () {
 Route::group(['prefix' => 'moderate'], function () {
     Route::get('','ModerateController@index')->name('ModerateList');
     Route::get('checking/{userid}','ModerateController@edit')->name('ModerateEdit');
+    Route::put('{userid}','ModerateController@update')->name('ModerateStore');
 });
